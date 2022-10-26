@@ -10,7 +10,7 @@ const connect = function() {
     console.log("You're connected...!");
     conn.write("Name: UWU");
   });
-
+  
   conn.on("data", (data) => {
     console.log(data);
   });
