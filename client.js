@@ -8,7 +8,10 @@ const connect = function() {
 
   conn.on("connect", (data) => {
     console.log("You're connected...!");
-    conn.write("Name: UWU");
+    setTimeout(() => {
+      conn.write("Name: UWU");
+    }
+    ,1000);
   });
 
   conn.on("data", (data) => {
@@ -18,7 +21,7 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   return conn;
-}
+};
 console.log('Connecting ... ');
 
 module.exports = {
